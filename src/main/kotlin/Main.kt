@@ -84,5 +84,43 @@ fun main() {
     val hardExpression = !(x != z) && bool || z > (x + y) && (!bool
             || y < z)
     println(hardExpression)
+}
 
-}*/
+
+07.11.2023
+--IF CONDITIONS
+Задание: Проверить является ли переменная string палиндромом
+fun main() {
+    var string = "racecar"
+    println("The string is $string")
+
+    if (string.reversed() == string) {
+        println("The string $string is a palindrome")
+    }
+}
+
+
+--NULL VALUES AND USER INPUT
+Задание: Программа для определения возраста
+fun main() {
+     println("Пожалуйста введите свой возраст")
+
+    val userAge = readLine()?.toInt()
+    if(userAge != null) {
+        if (userAge >= 0 && userAge < 18) {
+            println("Вы еще слишком молод")
+        } else if(userAge >= 18 && userAge <= 65) {
+            println("Вы взрослый")
+        } else {
+            println("Вы уже старый")
+        }
+    }
+}
+
+
+--ARRAYS
+fun main() {
+    val myArray = arrayOf(3, 2, 6, 4)
+    println(myArray[1])
+}
+ */
