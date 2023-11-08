@@ -123,4 +123,59 @@ fun main() {
     val myArray = arrayOf(3, 2, 6, 4)
     println(myArray[1])
 }
+
+
+08.11.2023
+--WHILE LOOP
+fun main() {
+    var x = 4
+    while (x > 2) {
+        println("Hello")
+        x--
+    }
+
+    println("whats up?")
+}
+
+fun main() {
+    val myArray = arrayOf("Hello", "Guys", "Whats up?")
+    val arrayLenght = myArray.size
+    var i = 0
+
+    while (i < arrayLenght) {
+        println(myArray[i])
+        i++
+    }
+}
+
+Задание: с помощью цикла while создать программу которая считает числа от
+заданного числа
+fun main() {
+    println("Пожалуйста введите число:")
+
+    var userNumber = readLine()?.toInt()
+    println("Давайте посчитаем от $userNumber до 0:")
+
+    while (userNumber != null && userNumber >= 0) {
+        println(userNumber)
+        userNumber--
+    }
+}
+
+fun main() {
+   println("Введите число 1:")
+   val x = readLine()?.toInt()
+
+   println("Введите число 2:")
+   val y = readLine()?.toInt()
+
+   var result = 1
+   var i = 0
+   while (x != null && y != null && i < y) {
+       result *= x
+       i++
+   }
+   println("$x в степени $y это $result")
+}
  */
+
