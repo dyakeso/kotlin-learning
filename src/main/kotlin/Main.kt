@@ -177,5 +177,82 @@ fun main() {
    }
    println("$x в степени $y это $result")
 }
+
+
+--FOR LOOP
+fun main() {
+    val myArray = arrayOf(4, 5, 8, 9, 10, 2, 3)
+    var max = myArray[0]
+    for(i in myArray) {
+        if(i > max) {
+            max = i
+        }
+    }
+    println(max)
+}
+
+fun main() {
+    val myArray = arrayOf(4, 5, 6)
+    var sum = 0
+
+    for (i in myArray) {
+        sum += i
+    }
+    println(sum)
+}
+
+
+13.11.2023
+--LISTS
+fun main() {
+    val array = arrayOf(1, 2, 3)
+    val list = mutableListOf(1, 2, 3)
+
+    list.removeAt(2)
+    println(list)
+}
+
+fun main() {
+    println("Пожалуйста, введите 5 чисел")
+
+    val list = mutableListOf<Int>()
+    for (i in 1..5) {
+        val num = readLine()?.toInt()
+        if (num != null) {
+            list.add(num)
+        }
+    }
+    for (i in list.size - 1 downTo 0) {
+        println(list[i])
+    }
+}
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
