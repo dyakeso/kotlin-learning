@@ -212,19 +212,6 @@ fun main() {
     println(list)
 }
 
-fun main() {
-    println("Пожалуйста, введите 5 чисел")
-
-    val list = mutableListOf<Int>()
-    for (i in 1..5) {
-        val num = readLine()?.toInt()
-        if (num != null) {
-            list.add(num)
-        }
-    }
-    for (i in list.size - 1 downTo 0) {
-        println(list[i])
-    }
 }
  */
 
