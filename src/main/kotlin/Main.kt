@@ -212,14 +212,78 @@ fun main() {
     println(list)
 }
 
+fun main() {
+    val list = mutableListOf<Int>()
+    for (i in 1..5) {
+        val x = readLine()?.toInt()
+        if (x != null) {
+            list.add(x)
+        }
+    }
+    println(list)
+    for (i in list.size - 1 downTo 0) {
+        println(list[i])
+    }
+}
+
+fun main() {
+    println("Введите число:")
+
+    var userNum = readLine()?.toInt()
+    println("Давайте выполним обратный отсчет от $userNum до 0:")
+
+
+    while (userNum != null && userNum > 0) {
+        println(userNum)
+        userNum--
+    }
+}
+
+
+17.11.2023
+--WHEN
+fun main() {
+    val age = readLine()?.toInt()
+
+    when (age) {
+        in 0..5 -> println("Ты еще ребенок!")
+        in 6..17 -> println("Ты подросток!")
+        18 -> println("Ты уже совершеннолетний!")
+        19, 20 -> println("Ты молодой человек!")
+        in 21..65 -> println("Ты уже взростлый!")
+        else -> println("Вы уже старый!")
+    }
+}
+
+fun main() {
+    val age = readLine()?.toInt()
+    val x = 6
+
+    when (age) {
+        in 0..5 -> println("Ты еще ребенок!")
+        in 6..17 -> println("Ты подросток!")
+        18 -> if (x == 6) {
+            println("Ты уже совершеннолетний!")
+        }
+        19, 20 -> println("Ты молодой человек!")
+        in 21..65 -> println("Ты уже взрослый!")
+        else -> println("Вы уже старый!")
+    }
+}
+
+Задание:
+fun main() {
+    println("Откуда ты?")
+    val userCountry = readLine()
+
+    when (userCountry) {
+        "USA" -> println("Hello!")
+        "Kazakhstan", "Казахстан" -> println("Salem!")
+        "Russia", "Россия" -> println("Привет!")
+        else -> println("К сожалению, не знаю эту страну")
+    }
 }
  */
-
-
-
-
-
-
 
 
 
