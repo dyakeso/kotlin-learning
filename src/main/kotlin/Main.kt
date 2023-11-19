@@ -1,3 +1,5 @@
+import kotlin.math.exp
+
 /*
 01.11.2023
 --SETTING UP WHAT WE NEED
@@ -283,17 +285,94 @@ fun main() {
         else -> println("К сожалению, не знаю эту страну")
     }
 }
- */
+
+
+18.11.2023
+--FUNCTIONS AND PARAMETERS
 fun main() {
-    println("hello")
+    printThreeLines()
+}
+
+fun printThreeLines() {
+    println("First")
+    println("Second")
+    println("Third")
+}
+
+fun main() {
+    printPow(3, 5 )
+    printPow(3, 4)
+    printPow(4,2)
+}
+
+fun printPow(base: Int, exponent: Int) {
+    var result = 1
+    for (i in 1..exponent) {
+        result *= base
+    }
+    println("$base to the power of $exponent is $result")
 }
 
 
+Задание:
+fun main() {
+    println("Для определения суммы значений от 1 до n. Введите значение n:")
+    printSum()
+}
+
+fun printSum() {
+   val n = readLine()?.toInt()
+   var sum = 0
+
+   if (n != null) {
+       for (i in 1..n) {
+           sum += i
+       }
+   }
+   println()
+   println("Сумма значений от 1 до $n равна $sum")
+}
 
 
+--FUNCTIONS WITH RETURN VALUE
 
+fun main() {
+    val pow = printPow(3, 5 )
+    println("3 to the power of 5 is $pow")
+}
 
+fun multiplay(a: Int, b:Int) = a * b
 
+fun printPow(base: Int, exponent: Int): Int {
+    var result = 1
+    for (i in 1..exponent) {
+        result *= base
+    }
+    return result
+}
+
+fun main() {
+    val list = listOf(1, 2, 3)
+}
+
+fun printFirstItem(list: List<Int>) = println(list[0])
+
+fun printPow(base: Int, exponent: Int): Int {
+    var result = 1
+    for (i in 1..exponent) {
+        result *= base
+    }
+    return result
+ */
+
+fun main() {
+    val list = listOf(3, 2, 5, 1, 5, 6, 7)
+    println("Список выглядит следующим образом: $list")
+}
+
+fun searchListItem( list: List<Int>) {
+
+}
 
 
 
