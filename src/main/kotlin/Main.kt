@@ -363,18 +363,28 @@ fun printPow(base: Int, exponent: Int): Int {
         result *= base
     }
     return result
- */
 
+Задание:
 fun main() {
-    val list = listOf(3, 2, 5, 1, 5, 6, 7)
+    val list = listOf(1, 3, 4, 6, 7)
     println("Список выглядит следующим образом: $list")
+    println("Найти число:")
+
+    val userInput = readLine()?.toInt()
+    if (userInput != null) {
+        println("Индекс числа $userInput это ${indexOf(list, userInput)}")
+    }
 }
 
-fun searchListItem( list: List<Int>) {
-
+fun indexOf(list: List<Int>, value:Int): Int {
+    for (i in 0 until list.size) {
+        if (list [i] == value) {
+            return i
+        }
+    }
+    return -1
 }
-
-
+ */
 
 
 
