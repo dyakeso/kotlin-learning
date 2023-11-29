@@ -384,17 +384,64 @@ fun indexOf(list: List<Int>, value:Int): Int {
     }
     return -1
 }
+
+
+22.11.2023
+--VARARG, DEFAULT AND NAMED PARAMETERS
+fun main() {
+    val max = getMax(1, 5, 6, 12, 7)
+    println(max)
+}
+
+fun getMax(vararg numbers: Int): Int {
+    var max = numbers[0]
+    for(number in numbers) {
+        if(number > max) {
+            max = number
+        }
+    }
+    return max
+}
+
+
+28.11.2023
+--FUNCTIONS WITH RETURN VALUE Повторение
+
+
+
+fun main() {
+    val userCountry = userInput("Kazakhstan")
+    println(userCountry)
+}
+
+fun userInput(country: String): String {
+    when(country) {
+        "USA" -> println("Hello!!")
+        "Kazakhstan" -> println("Salem!!")
+        "Korea" -> println("Ан-йо ха-сей-йо")
+        else -> println("Извините, я не знаю такую страну")
+    }
+    return country
+}
+
+fun main() {
+    val list = listOf(1, 3, 4, 6, 7, 9)
+    println("Список выглядит следующим образом: $list")
+    println("Найти число:")
+
+    val userInput = readLine()?.toInt()
+    if(userInput != null) {
+        println("Индекс числа $userInput это ${searchNum(list, userInput)}")
+    }
+}
+
+fun searchNum(list: List<Int>, value: Int): Int {
+    for( i in 0 until list.size -1) {
+        if(list[i] == value) {
+            return i
+        }
+    }
+    return -1
+}
  */
-
-
-
-
-
-
-
-
-
-
-
-
 
