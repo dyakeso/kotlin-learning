@@ -386,7 +386,7 @@ fun indexOf(list: List<Int>, value:Int): Int {
 }
 
 
-22.11.2023
+30.11.2023
 --VARARG, DEFAULT AND NAMED PARAMETERS
 fun main() {
     val max = getMax(1, 5, 6, 12, 7)
@@ -404,44 +404,69 @@ fun getMax(vararg numbers: Int): Int {
 }
 
 
-28.11.2023
---FUNCTIONS WITH RETURN VALUE Повторение
-
-
-
 fun main() {
-    val userCountry = userInput("Kazakhstan")
-    println(userCountry)
+    searchFor(search = "Как стать программистом?")
 }
 
-fun userInput(country: String): String {
-    when(country) {
-        "USA" -> println("Hello!!")
-        "Kazakhstan" -> println("Salem!!")
-        "Korea" -> println("Ан-йо ха-сей-йо")
-        else -> println("Извините, я не знаю такую страну")
+fun searchFor(search: String, searchEngine: String = "Google") {
+    println("Search for $search on $searchEngine")
+}
+fun getMax(vararg numbers: Int): Int {
+    var max = numbers[0]
+    for(number in numbers) {
+        if(number > max) {
+            max = number
+        }
     }
-    return country
+    return max
 }
+*/
+
+/*
+fun main() {
+    val sum = alternatingSum(3, 4, 5, 2, 1, 2, 3)
+    println("The alternating sum is $sum")
 
 fun main() {
-    val list = listOf(1, 3, 4, 6, 7, 9)
-    println("Список выглядит следующим образом: $list")
+    val list = listOf(1, 4, 5, 6, 8, 10)
+    println("Список выглядит следующим образом $list")
     println("Найти число:")
 
-    val userInput = readLine()?.toInt()
-    if(userInput != null) {
-        println("Индекс числа $userInput это ${searchNum(list, userInput)}")
+    val input = readLine()?.toInt()
+    if(input != null) {
+        println("Индекс числа $input это ${searchNumber(list, input)}")
     }
 }
 
-fun searchNum(list: List<Int>, value: Int): Int {
-    for( i in 0 until list.size -1) {
+fun searchNumber(list: List<Int>, value: Int): Int {
+    var result = 0
+    for(i in 0 until list.size) {
         if(list[i] == value) {
             return i
         }
     }
     return -1
 }
+11.12.2023
+Задание:
  */
+fun main() {
+    val sum = alternatingSum(3)
+    println(sum)
+}
+
+fun alternatingSum(vararg numbers: Int): Int {
+    var sum = 0 //-3
+    var toggle = false //true
+
+    for(number in numbers) {
+        if(toggle) {
+            sum += number
+        } else {
+            sum -= number
+        }
+        toggle = !toggle
+    }
+    return sum
+}
 
