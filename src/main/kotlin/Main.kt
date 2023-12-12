@@ -449,7 +449,6 @@ fun searchNumber(list: List<Int>, value: Int): Int {
 }
 11.12.2023
 Задание:
- */
 fun main() {
     val sum = alternatingSum(3)
     println(sum)
@@ -470,3 +469,41 @@ fun alternatingSum(vararg numbers: Int): Int {
     return sum
 }
 
+
+13.12.2023
+--EXTENSION FUNCTIONS
+
+fun main() {
+    println("Please enter a number")
+    val input = readLine()?.toInt()
+
+    if(input != null) {
+        if(input.isPrime()) {
+            println("$input is a prime number")
+        } else {
+            println("$input is not a prime number")
+        }
+    }
+}
+
+fun Int.isPrime(): Boolean {
+    for(i in 2 until this) {
+        if(this % i ==0) {
+            return false
+        }
+    }
+    return true
+}
+ */
+fun main() {
+    val list = listOf(1, 2, 3, 4, 5, 6)
+    println("Произведение чисел $list это ${list.product()}")
+}
+
+fun List<Int>.product(): Int {
+    var result = 1
+    for(value in this) {
+        result *= value
+    }
+    return result
+}
