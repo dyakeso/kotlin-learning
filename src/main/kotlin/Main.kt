@@ -494,16 +494,27 @@ fun Int.isPrime(): Boolean {
     }
     return true
 }
- */
+
 fun main() {
-    val list = listOf(1, 2, 3, 4, 5, 6)
-    println("Произведение чисел $list это ${list.product()}")
+    val list = listOf(2, 4, 5, 5)
+    println("$list is ${list.product()} ")
 }
 
-fun List<Int>.product(): Int {
+fun List<Int>.product():Int {
     var result = 1
     for(value in this) {
         result *= value
     }
     return result
+
+
+
+14.12.2023
+--CLASSES
+*/
+fun main() {
+    val myRect = rectangle(4.0, 7.0)
+    println("rectangle area is ${myRect.area()}")
+    println("rectangle perimeter is ${myRect.perimeter()}")
+    println("is rectangle a square? ${myRect.isSquare()}")
 }
