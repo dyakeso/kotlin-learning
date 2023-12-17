@@ -1,4 +1,5 @@
 import kotlin.math.exp
+import kotlin.math.sqrt
 
 /*
 01.11.2023
@@ -511,10 +512,18 @@ fun List<Int>.product():Int {
 
 14.12.2023
 --CLASSES
-*/
 fun main() {
     val myRect = rectangle(4.0, 7.0)
     println("rectangle area is ${myRect.area()}")
     println("rectangle perimeter is ${myRect.perimeter()}")
     println("is rectangle a square? ${myRect.isSquare()}")
+
+    val myCircle1 = Circle(5.0)
+    val myCircle2 = Circle(7.0)
 }
+ */
+
+fun main() {
+    val myTriangle = triangle(2.0, 4.0, 6.0)
+}
+
