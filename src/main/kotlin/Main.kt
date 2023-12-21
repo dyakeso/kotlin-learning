@@ -521,9 +521,26 @@ fun main() {
     val myCircle1 = Circle(5.0)
     val myCircle2 = Circle(7.0)
 }
- */
 
 fun main() {
     val myTriangle = triangle(2.0, 4.0, 6.0)
 }
+
+21.12.2023
+--INHERITANCE
+
+
+fun main() {
+    val myRectangle = rectangle(5.0, 7.0)
+    myRectangle.changeName("Dias")
+    println(myRectangle.name)
+
+    val myTriangle = triangle(7.0, 4.0, 9.0)
+    myTriangle.changeName("dyakeso")
+    println(myTriangle.name)
+}
+
+--VISIBILITY MODIFIERS
+ */
+
 
