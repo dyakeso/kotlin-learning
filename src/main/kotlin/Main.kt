@@ -1,3 +1,4 @@
+import java.awt.Shape
 import kotlin.math.exp
 import kotlin.math.sqrt
 
@@ -541,6 +542,17 @@ fun main() {
 }
 
 --VISIBILITY MODIFIERS
+
+
+25.12.2023
+--ABSTRACT CLASSES
  */
+
+fun main() {
+    val rect = rectangle(5.0)
+    val rect2 = rectangle(5, 4)
+
+
+}
 
 
