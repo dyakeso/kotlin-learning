@@ -1,6 +1,7 @@
 import java.awt.Shape
 import kotlin.math.exp
 import kotlin.math.sqrt
+import kotlin.random.Random
 
 /*
 01.11.2023
@@ -546,13 +547,14 @@ fun main() {
 
 25.12.2023
 --ABSTRACT CLASSES
- */
-
 fun main() {
     val rect = rectangle(5.0)
     val rect2 = rectangle(5, 4)
-
-
 }
 
-
+27.12.2023
+--OBJECTS AND COMPANION OBJECTS
+ */
+fun main() {
+    val myRec = rectangle.randomRectangle()
+}
