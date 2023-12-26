@@ -554,7 +554,30 @@ fun main() {
 
 27.12.2023
 --OBJECTS AND COMPANION OBJECTS
- */
 fun main() {
     val myRec = rectangle.randomRectangle()
+}
+
+--ANONYMOUS CLASSES
+ */
+
+fun main() {
+    val a = 3.0
+    val b = 4.0
+    val heigh = 2.0
+    val parallelogram = object : shape("Parallelogram", a, b, heigh) {
+
+        init {
+            println("Parallelogram created with a = $a, b = $b and heigh = $heigh")
+            println("The area is ${area()}")
+            println("The perimeter is ${perimeter()}")
+        }
+        override fun perimeter(): Double {
+            return 2 * a + 2 * b
+        }
+
+        override fun area(): Double {
+            return a * heigh
+        }
+    }
 }
