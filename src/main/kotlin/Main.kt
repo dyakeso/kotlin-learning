@@ -1,4 +1,6 @@
 import java.awt.Shape
+import java.lang.Exception
+import java.lang.NumberFormatException
 import kotlin.math.exp
 import kotlin.math.sqrt
 import kotlin.random.Random
@@ -559,7 +561,6 @@ fun main() {
 }
 
 --ANONYMOUS CLASSES
- */
 
 fun main() {
     val a = 3.0
@@ -570,7 +571,6 @@ fun main() {
         init {
             println("Parallelogram created with a = $a, b = $b and heigh = $heigh")
             println("The area is ${area()}")
-            println("The perimeter is ${perimeter()}")
         }
         override fun perimeter(): Double {
             return 2 * a + 2 * b
@@ -581,3 +581,29 @@ fun main() {
         }
     }
 }
+
+fun main() {
+    val division = try {
+        divede(5.0, 0.0)
+    } catch (e: DivesionByZeroException) {
+        0.0
+    }
+
+    println("The result of the division is $division")
+}
+
+class DivesionByZeroException : Exception("You cannot divede by zero. Please choose a different number")
+
+fun divede(a: Double, b: Double): Double {
+    return a / b
+}
+
+ */
+
+fun main() {
+    var list = (1..20).toList()
+    println(list)
+    list = list.filter { it % 2 == 0  }
+    println(list)
+}
+
